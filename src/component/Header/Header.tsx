@@ -4,6 +4,7 @@ import React from "react";
 import { LanguageSelector } from "../LanguageSelector/LanguageSelector";
 import { useTranslation } from "react-i18next";
 
+
 export const Header = () => {
   const { t } = useTranslation();
   const isActive = ({ isActive }: { isActive: boolean }) => {
@@ -15,7 +16,7 @@ export const Header = () => {
   return (
     <header className="header">
       <NavLink to="">
-        <img src="src\image\logo\Vector.svg" alt="logo" className="logo" />
+        <img src="/image/logo/Vector.svg" alt="logo" className="logo" />
       </NavLink>
       <div className="header__wrapper">
         <nav className="navigation">
