@@ -2,7 +2,10 @@ import { NavLink } from "react-router-dom";
 import "./Header.scss";
 import React from "react";
 import { LanguageSelector } from "../LanguageSelector/LanguageSelector";
+import { useTranslation } from "react-i18next";
+
 export const Header = () => {
+  const { t } = useTranslation();
   const isActive = ({ isActive }: { isActive: boolean }) => {
     const baseClass = "navigation__li";
     const activeClass = isActive ? "navigation__li--active" : "";
@@ -18,16 +21,16 @@ export const Header = () => {
         <nav className="navigation">
           <ul className="navigation__ul">
             <NavLink to="/about" className={isActive}>
-              About me
+              {t("nav.about")}
             </NavLink>
             <NavLink to="" className={isActive}>
-              Projects
+              {t("nav.projects")}
             </NavLink>
             <NavLink to="" className={isActive}>
-              Certifacates
+              {t("nav.certificates")}
             </NavLink>
             <NavLink to="" className={isActive}>
-              Contact
+              {t("nav.contact")}
             </NavLink>
           </ul>
         </nav>

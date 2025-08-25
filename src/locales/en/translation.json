@@ -1,3 +1,12 @@
 {
-  "title": "Tetiana Vozniuk"
+  "title": "Tetiana Vozniuk",
+  "nav": {
+    "about": "About me",
+    "projects": "Projects",
+    "certificates": "Certificates",
+    "contact": "Contact"
+  },
+  "frontend": {
+    "des": "Frontend developer with 1.5 years of experience in creating\nresponsive, user-friendly applications using HTML, CSS,\nJavaScript, React, and TypeScript technologies. Experienced in\nRedux Toolkit, Zustand and Tailwind CSS. Proficient in crafting\nreusable UI components, integrating RESTful APIs, and optimizing\nperformance through lazy loading, code splitting, and efficient\nAPI calls — achieving up to 20% improvement in load times. Strong\ngrasp of version control (Git), modern build tools (Vite,\nWebpack). Skilled in writing clean and efficient code. I’m\ndedicated to ongoing self-improvement and consistently seek out\nnew tools and technologies to expand my knowledge."
+  }
 }
