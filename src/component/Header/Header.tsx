@@ -16,7 +16,7 @@ export const Header = () => {
   return (
     <header className="header">
       <NavLink to="">
-        <img src="/image/logo/Vector.svg" alt="logo" className="logo" />
+        <img src="image/logo/Vector.svg" alt="logo" className="logo" />
       </NavLink>
       <div className="header__wrapper">
         <nav className="navigation">

@@ -9,13 +9,13 @@ export const Me = () => {
     <div className="me">
       <h1 className="me__title">{t("title")}</h1>
       <div className="me__wraperAbout">
-        <img className="me__star spin" alt="star" src="/image/Star.svg" />
+        <img className="me__star spin" alt="star" src="image/Star.svg" />
         <div className="me__about">
           <h3 className="me__frontTitle">Frontend Developer</h3>
           <div className="me__wrapperDes">
             <img
               className="me__photo"
-              src="/image/photo_2023-10-18_17-52-24.jpg"
+              src="image/photo_2023-10-18_17-52-24.jpg"
               alt="photo"
             />
             <p className="me__des">{t("frontend.des")}</p>
