@@ -7,7 +7,7 @@ export const Me = () => {
   const { t } = useTranslation();
   return (
     <div className="me">
-      <h1 className="me__title">{t("title")}</h1>
+      <h1 className="font-playfair text-[159px] leading-[100%] text-[#ac4800] text-center tracking-[3px] mb-[35px] w-full">{t("title")}</h1>
       <div className="me__wraperAbout">
         <img className="me__star spin" alt="star" src="image/Star.svg" />
         <div className="me__about">
