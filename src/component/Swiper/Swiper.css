@@ -1,0 +1,57 @@
+.infinite-scroll-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  max-width: 1500px;
+}
+
+.infinite-scroll-track {
+  display: flex;
+  gap: 32px;
+  animation: infiniteScroll 25s linear infinite;
+  width: max-content;
+}
+
+.scroll-item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 12px;
+  width: 154px;
+  height: 80px;
+  background-color: #ffb98733;
+  border-radius: 16px;
+}
+
+.scroll-item img {
+  width: 24px;
+  height: 24px;
+  width: auto;
+  display: block;
+}
+
+.scroll-name {
+  font-family: "Satoshi Variable", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #ac4800;
+  align-items: center;
+  text-align: center;
+  cursor: default;
+}
+
+@keyframes infiniteScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 15px));
+  }
+}
+
+.infinite-scroll-track:hover {
+  animation-play-state: paused;
+}

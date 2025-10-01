@@ -1,28 +1,38 @@
 import React from "react";
-import "./Me.scss";
+import styles from "./Me.module.scss";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 
 export const Me = () => {
   const { t } = useTranslation();
   return (
-    <div className="me">
-      <h1 className="font-playfair text-[159px] leading-[100%] text-[#ac4800] text-center tracking-[3px] mb-[35px] w-full">{t("title")}</h1>
-      <div className="me__wraperAbout">
-        <img className="me__star spin" alt="star" src="image/Star.svg" />
-        <div className="me__about">
-          <h3 className="me__frontTitle">Frontend Developer</h3>
-          <div className="me__wrapperDes">
+    <div className={styles.me}>
+      {/* <h1 className="font-playfair font-normal text-[159px] leading-[100%] text-[#ac4800] tracking-[3px] mb-[35px] w-full text-center flex items-center justify-center">
+        {t("title")}
+      </h1> */}
+      <h1 className={styles.title}>{t("title")}</h1>
+      <div className={styles.wraperAbout}>
+        <img
+          className={`${styles.star} ${styles.spin}`}
+          alt="star"
+          src="image/Star.svg"
+        />
+        <div className={styles.about}>
+          <h2 className={styles.frontTite}>Frontend Developer</h2>
+          <div className={styles.wrapperDes}>
             <img
-              className="me__photo"
+              className={styles.photo}
               src="image/photo_2023-10-18_17-52-24.jpg"
               alt="photo"
             />
-            <p className="me__des">{t("frontend.des")}</p>
+            <p className={styles.des}>{t("frontend.des")}</p>
           </div>
-          <button className="me__button">
-            <NavLink className='me__buttonText'to="/">contact me</NavLink>
-          </button>
+          {/* <a className={styles.button} href='/'> */}
+            <NavLink className={styles.button} to="/">
+              contact me
+          </NavLink>
+          
+          {/* </a> */}
         </div>
       </div>
     </div>

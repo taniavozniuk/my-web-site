@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import i18next from "i18next";
+import styles from "./Lang.module.scss";
 
 export const LanguageSelector = () => {
   const [selectedLanguage, setSelectedLanguage] = useState("en");
 
-  const handleChageLanguage = (lang:string) => {
+  const handleChageLanguage = (lang: string) => {
     setSelectedLanguage(lang);
     i18next.changeLanguage(lang);
     console.log({ lang });
   };
   return (
-    <div className="language-select">
+    <div className={styles["language-select"]}>
       <span
         onClick={() => handleChageLanguage("en")}
         style={{

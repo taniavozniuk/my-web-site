@@ -1,26 +1,24 @@
 import { NavLink } from "react-router-dom";
-import "./Header.scss";
-import React from "react";
+import styles from "./Header.module.scss";
 import { LanguageSelector } from "../LanguageSelector/LanguageSelector";
 import { useTranslation } from "react-i18next";
-
 
 export const Header = () => {
   const { t } = useTranslation();
   const isActive = ({ isActive }: { isActive: boolean }) => {
-    const baseClass = "navigation__li";
-    const activeClass = isActive ? "navigation__li--active" : "";
+    const baseClass = styles.navigation__li;
+    const activeClass = isActive ? styles["navigation__li--active"] : "";
     return `${baseClass} ${activeClass}`;
   };
 
   return (
-    <header className="header">
+    <header className={styles.header}>
       <NavLink to="">
         <img src="image/logo/Vector.svg" alt="logo" className="logo" />
       </NavLink>
-      <div className="header__wrapper">
-        <nav className="navigation">
-          <ul className="navigation__ul">
+      <div className={styles.wrapper}>
+        <nav className={styles.navigation}>
+          <ul className={styles.navigation__ul}>
             <NavLink to="/about" className={isActive}>
               {t("nav.about")}
             </NavLink>

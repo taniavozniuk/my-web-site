@@ -1,15 +1,13 @@
 /** @type {import('tailwindcss').Config} */
-export const content = ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"];
-export const theme = {
-  extend: {
-    fontFamily: {
-      sans: ["system-ui", "sans-serif"],
-      playfair: ["'Playfair'", "serif"],
-      satoshi: ["SatoshiVariable", "sans-serif"],
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      fontFamily: {
+        playfair: ['"Playfair Display"', "serif"],
+        sans: ["system-ui", "sans-serif"],
+      },
     },
-    // colors: {
-    //   "custom-beige": "#f6e6d3",
-    // },
   },
+  plugins: [],
 };
-export const plugins = [];
