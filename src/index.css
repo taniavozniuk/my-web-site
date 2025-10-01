@@ -20,7 +20,7 @@
 
 @font-face {
   font-family: "Satoshi Variable";
-  src: url("/public/font/Satoshi_Complete/Fonts/TTF/Satoshi-Variable.ttf");
+  src: url("/font/Satoshi_Complete/Fonts/TTF/Satoshi-Variable.ttf");
   font-weight: normal;
 }
 body {
