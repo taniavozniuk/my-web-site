@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import "./i18n.js";
 import React from "react";
+import { ToastContainer } from "react-toastify";
 
 const rootElement = document.getElementById("root");
 if (!rootElement) {

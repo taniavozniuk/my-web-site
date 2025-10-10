@@ -1,0 +1,30 @@
+.Certificate {
+  margin: 0 auto;
+  max-width: 1170px;
+  text-align: center;
+}
+
+.title {
+  width: 100%;
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+  font-size: 159px;
+  line-height: 100%;
+  color: #ac4800;
+  text-align: left;
+  cursor: default;
+  margin: 172px 0 72px 0;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__image {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 16px;
+}

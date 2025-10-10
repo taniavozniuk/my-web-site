@@ -1,9 +1,11 @@
 import { Link, NavLink } from "react-router-dom";
 import { info } from "./info";
 import styles from "./Project.module.scss";
+import { useTranslation } from "react-i18next";
 export const Projects = () => {
+  const { t } = useTranslation();
   return (
-    <div className={styles.projCon}>
+    <section className={styles.projCon} id="projects">
       <h2 className={styles.title}>Projects</h2>
       <section className={styles.section}>
         {info.map((item) => (
@@ -22,10 +24,10 @@ export const Projects = () => {
                 ))}
               </div>
               <h3 className={styles.name}>{item.name}</h3>
-              <p className={styles.dec}>{item.description}</p>
+              <p className={styles.dec}>{t(`project.${item.description}`)}</p>
               {item.link && (
                 <Link className={styles.button} to={item.link} target="_blank">
-                  Visit website
+                  {t("visit")}
                 </Link>
               )}
             </div>
@@ -39,6 +41,6 @@ export const Projects = () => {
           </div>
         ))}
       </section>
-    </div>
+    </section>
   );
 };

@@ -1,0 +1,76 @@
+.ContactCon {
+  margin: 0 0 72px 0;
+  margin: 0 auto;
+  max-width: 1170px;
+  padding-top: 172px;
+}
+
+.title {
+  width: 100%;
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+  font-size: 159px;
+  line-height: 120%;
+  color: #ac4800;
+  align-items: center;
+  text-align: center;
+  cursor: default;
+  margin: 0;
+}
+
+.conform {
+  display: flex;
+  justify-content: end;
+}
+
+.des {
+  margin: 0;
+  font-family: "Satoshi Variable", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #5c4636;
+  cursor: default;
+  height: 96px;
+  width: 359px;
+  align-items: right;
+}
+
+.form {
+  width: 750px;
+  // width: 100%;
+  margin: 0 auto;
+  max-width: 1170px;
+  padding-top: 104px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.WrapNameEmeil {
+  display: flex;
+  gap: 32px;
+}
+
+.messange {
+  width: 100%;
+}
+
+.button {
+  margin-top: 16px;
+  width: 359px;
+  height: 57px;
+  border-radius: 16px;
+  border: 1px solid #ac4800;
+  background-color: transparent;
+  color: #ac4800;
+  font-family: "Satoshi Variable", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  &:hover {
+    background-color: #763304;
+    border: 1px solid #763304;
+    color: #fff;
+  }
+}

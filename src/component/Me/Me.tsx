@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 export const Me = () => {
   const { t } = useTranslation();
   return (
-    <div className={styles.me}>
+    <section className={styles.me} id="about">
       {/* <h1 className="font-playfair font-normal text-[159px] leading-[100%] text-[#ac4800] tracking-[3px] mb-[35px] w-full text-center flex items-center justify-center">
         {t("title")}
       </h1> */}
@@ -35,6 +35,6 @@ export const Me = () => {
           {/* </a> */}
         </div>
       </div>
-    </div>
+    </section>
   );
 };

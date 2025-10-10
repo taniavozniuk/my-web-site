@@ -3,7 +3,7 @@ export const info = [
     id: 1,
     name: "MindBloom",
     description:
-      "MindBloom is a web app that helps users find, book, and pay for a psychologist. Users can filter specialists, view suggested psychologists, see detailed profiles with reviews, and schedule consultations",
+      "project1_description",
     technologi: [
       { id: 1, src: "image/icon/css.svg" },
       { id: 2, src: "image/icon/html5-line.svg" },
@@ -22,7 +22,7 @@ export const info = [
     id: 2,
     name: "Phone Catalog",
     description:
-      "This project is a mobile application website featuring tablets and accessories, where each product has both a short and detailed description. Users can like items, add them to favorites or the cart, manage quantities, and enjoy a clean two-color design with a smooth loader for better experience.",
+      "project2_description",
     technologi: [
       { id: 1, src: "image/icon/css.svg" },
       { id: 2, src: "image/icon/html5-line.svg" },
@@ -37,5 +37,42 @@ export const info = [
     ],
     iamge: "image/project/phone_catalog.jpg",
     link: "https://taniavozniuk.github.io/Phone_Catalogue/",
+  },
+  {
+    id: 3,
+    name: "Game 2048",
+    description:
+      "project3_description",
+    technologi: [
+      { id: 1, src: "image/icon/html5-line.svg" },
+      { id: 2, src: "image/icon/css.svg" },
+      { id: 3, src: "image/icon/javascript.svg" },
+    ],
+    iamge: "image/project/2048.jpg",
+    link: "https://taniavozniuk.github.io/Game_2048_JS/",
+  },
+  {
+    id: 4,
+    name: "Dia",
+    description:
+      "project4_description",
+    technologi: [
+      { id: 1, src: "image/icon/html5-line.svg" },
+      { id: 2, src: "image/icon/css.svg" },
+    ],
+    iamge: "image/project/Dia.jpg",
+    link: "https://taniavozniuk.github.io/Dia-web-page/",
+  },
+  {
+    id: 5,
+    name: "MyBike Store",
+    description:
+      "project5_description",
+    technologi: [
+      { id: 1, src: "image/icon/html5-line.svg" },
+      { id: 2, src: "image/icon/css.svg" },
+    ],
+    iamge: "image/project/bike.jpg",
+    link: "https://taniavozniuk.github.io/bike/",
   },
 ];

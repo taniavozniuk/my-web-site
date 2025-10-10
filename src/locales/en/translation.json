@@ -8,5 +8,17 @@
   },
   "frontend": {
     "des": "Frontend developer with internship and team-project experience. Skilled in React, TypeScript, and modern UI frameworks, integrating REST APIs and managing state with Redux Toolkit/Zustand. Focused on building responsive, performant interfaces and writing clean, maintainable code."
-  }
+  },
+  "project": {
+    "project1_description": "MindBloom is a web app that helps users find, book, and pay for a psychologist. Users can filter specialists, view suggested psychologists, see detailed profiles with reviews, and schedule consultations.",
+    "project2_description": "This project is a mobile application website featuring tablets and accessories, where each product has both a short and detailed description. Users can like items, add them to favorites or the cart, manage quantities, and enjoy a clean two-color design with a smooth loader for better experience.",
+    "project3_description": "A fully functional clone of the popular 2048 game, implemented with JavaScript. The game is built using a combination of game logic and UI design, providing a smooth experience for players to enjoy the classic number merging game.",
+    "project4_description": "This project was created to help people understand that their brilliant ideas can be brought to life by professionals. The website contains a brief description of the agency, its experience, the services it can provide, reviews, and comments.",
+    "project5_description": "Project demonstrates a bicycle website that helps users choose a comfortable and reliable bicycle for commuting. The website has a detailed description of the bicycle category, the categories of bicycles that can be chosen, and feedback."
+  },
+  "visit": "Visit website",
+  "formdes": "Have a project in mind, need a developer for your team, or just want to say hi? I’m always open to discussing new ideas, exciting opportunities, or ways we can collaborate.",
+  "submit": "Submit",
+  "questions": "Have questions or ideas you want to share? Write to me anytime!",
+  "btques": "Email me"
 }
