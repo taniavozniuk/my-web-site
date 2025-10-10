@@ -28,10 +28,10 @@ export const Me = () => {
             <p className={styles.des}>{t("frontend.des")}</p>
           </div>
           {/* <a className={styles.button} href='/'> */}
-            <NavLink className={styles.button} to="/">
-              contact me
-          </NavLink>
-          
+          <a className={styles.button} href="#contact">
+            contact me
+          </a>
+
           {/* </a> */}
         </div>
       </div>

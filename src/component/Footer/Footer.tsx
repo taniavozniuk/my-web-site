@@ -10,7 +10,7 @@ export const Footer = () => {
       <ul className={styles.ul}>
         {link.map((l) => (
           <li key={l.id}>
-            <NavLink to={l.link} className={styles.li}>
+            <NavLink to={l.link} className={styles.li} target="_blank">
               {l.name}
             </NavLink>
           </li>
@@ -18,7 +18,9 @@ export const Footer = () => {
       </ul>
       <div className={styles.wrapQuestion}>
         <h2 className={styles.question}>{t("questions")}</h2>
-        <button className={styles.button}>{t("btques")}</button>
+        <a className={styles.button} href="mailto:taniavoznyk19655@gmail.com">
+          {t("btques")}
+        </a>
       </div>
     </div>
   );

@@ -42,7 +42,12 @@
 }
 
 .button {
-  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  margin: 24px 0 0 0;
   width: 261px;
   height: 57px;
   border-radius: 16px;

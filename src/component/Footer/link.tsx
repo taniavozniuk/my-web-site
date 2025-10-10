@@ -1,5 +1,5 @@
 export const link = [
-  { id: 1, name: "Email", link: "taniavoznyk19655@gmail.com" },
+  { id: 1, name: "Email", link: "mailto:taniavoznyk19655@gmail.com" },
   { id: 2, name: "Github", link: "https://github.com/taniavozniuk" },
   {
     id: 3,

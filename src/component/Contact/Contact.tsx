@@ -60,7 +60,6 @@ export const Contact = () => {
             id="name"
             label="Name *"
             type="text"
-            placeholder="Please enter a name"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
@@ -68,7 +67,6 @@ export const Contact = () => {
             id="email"
             label="Email *"
             type="text"
-            placeholder="Please enter a email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -78,7 +76,6 @@ export const Contact = () => {
             id="messange"
             label="Messange *"
             type="text"
-            placeholder="Please enter a messange"
             value={messange}
             onChange={(e) => setMessange(e.target.value)}
           />
