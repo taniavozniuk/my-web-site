@@ -11,21 +11,44 @@ export const Certificate = () => {
     <section className={styles.Certificate} id="certificates">
       <h2 className={styles.title}>Certificates</h2>
 
-      <Swiper
-        modules={[Autoplay, Navigation, Pagination]}
-        spaceBetween={30}
-        slidesPerView={1}
-        className="swiper"
-        style={{ background: 'white', borderRadius: '16px'}}
-        autoplay={{ delay: 5000, disableOnInteraction: false }}
-        pagination={{ clickable: true, el: "#pagination" }}
-      >
-        {certi.map((c) => (
-          <SwiperSlide key={c.id}>
-            <img src={c.img} alt={`Slide ${c.id}`} className="slider__image" />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className={styles.sliderWrapper}>
+        <Swiper
+          modules={[Autoplay, Navigation, Pagination]}
+          spaceBetween={30}
+          slidesPerView={1}
+          className="swiper"
+          style={{ background: "white", borderRadius: "16px" }}
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          // breakpoints={{
+          //   0: {
+          //     navigation: {
+          //       nextEl: ".swiper-button-next",
+          //       prevEl: ".swiper-button-prev",
+          //     },
+          //     pagination: { clickable: true, el: ".custom-pagination" },
+          //   },
+          //   1024: {
+          //     navigation: false,
+          //     pagination: false,
+          //   },
+          // }}
+        >
+          {certi.map((c) => (
+            <SwiperSlide key={c.id}>
+              <img
+                src={c.img}
+                alt={`Slide ${c.id}`}
+                className={styles.slider__image}
+              />
+            </SwiperSlide>
+          ))}
+{/* 
+          <div className="swiper-button-prev"></div>
+          <div className="swiper-button-next"></div>
+
+          <div className="custom-pagination"></div> */}
+        </Swiper>
+      </div>
     </section>
   );
 };

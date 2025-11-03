@@ -12,11 +12,12 @@ export const Me = () => {
       </h1> */}
       <h1 className={styles.title}>{t("title")}</h1>
       <div className={styles.wraperAbout}>
-        <img
+        {/* <img
           className={`${styles.star} ${styles.spin}`}
           alt="star"
           src="image/Star.svg"
-        />
+        /> */}
+        <img src="image/7d1.gif" alt="gif" className={styles.gif} />
         <div className={styles.about}>
           <h2 className={styles.frontTite}>Frontend Developer</h2>
           <div className={styles.wrapperDes}>

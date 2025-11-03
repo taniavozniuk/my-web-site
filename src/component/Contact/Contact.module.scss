@@ -1,3 +1,5 @@
+@import "../../utils/misins";
+
 .ContactCon {
   margin: 0 0 72px 0;
   margin: 0 auto;
@@ -9,18 +11,33 @@
   width: 100%;
   font-family: "Playfair Display", sans-serif;
   font-weight: 400;
-  font-size: 159px;
-  line-height: 120%;
   color: #ac4800;
   align-items: center;
   text-align: center;
   cursor: default;
   margin: 0;
+
+  @include onMobile {
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  @include onDesktop {
+    font-size: 159px;
+    line-height: 100%;
+  }
 }
 
 .conform {
-  display: flex;
-  justify-content: end;
+  @include onMobile {
+    display: flex;
+    justify-content: start;
+  }
+
+  @include onDesktop {
+    display: flex;
+    justify-content: end;
+  }
 }
 
 .des {
@@ -44,12 +61,22 @@
   padding-top: 104px;
   display: flex;
   flex-direction: column;
+
   gap: 48px;
+
+
 }
 
 .WrapNameEmeil {
-  display: flex;
   gap: 32px;
+
+  @include onMobile {
+    display: block;
+  }
+
+  @include onDesktop {
+    display: flex;
+  }
 }
 
 .messange {

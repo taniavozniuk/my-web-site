@@ -1,3 +1,5 @@
+@import "../../utils/misins";
+
 .Certificate {
   margin: 0 auto;
   max-width: 1170px;
@@ -8,12 +10,24 @@
   width: 100%;
   font-family: "Playfair Display", sans-serif;
   font-weight: 400;
-  font-size: 159px;
-  line-height: 100%;
   color: #ac4800;
   text-align: left;
   cursor: default;
   margin: 172px 0 72px 0;
+
+  @include onMobile {
+    font-size: 40px;
+    line-height: 60%;
+  }
+
+  @include onDesktop {
+    font-size: 159px;
+    line-height: 100%;
+  }
+}
+
+.sliderWrapper {
+  position: relative;
 }
 
 .swiper-slide {
@@ -27,4 +41,30 @@
   height: auto;
   object-fit: contain;
   border-radius: 16px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #ac4800;
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute;
+  top: auto;
+  bottom: -50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.swiper-button-prev {
+  left: 45%;
+}
+
+.swiper-button-next {
+  right: 45%;
+}
+
+.custom-pagination {
+  margin-top: 16px;
+  text-align: center;
 }

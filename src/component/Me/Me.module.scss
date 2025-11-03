@@ -1,7 +1,15 @@
+@import "../../utils/misins";
 .me {
-  padding: 55px 0 72px 0;
   margin: 0 auto;
   max-width: 1170px;
+
+  @include onMobile {
+    padding: 24px 0 60px 0;
+  }
+
+  @include onDesktop {
+    padding: 24px 0 72px 0;
+  }
 }
 
 .title {
@@ -9,28 +17,35 @@
   width: 100%;
   font-family: "Playfair Display", sans-serif;
   font-weight: 400;
-  font-size: 159px;
-  line-height: 100%;
   color: #ac4800;
   align-items: center;
   text-align: center;
   cursor: default;
+
+  @include onMobile {
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  @include onDesktop {
+    font-size: 159px;
+    line-height: 100%;
+  }
 }
 
 .wraperAbout {
-  display: flex;
-  justify-content: space-between;
-}
+  @include onMobile {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
 
-.frontTitle {
-  text-align: left;
-  margin: 0 0 32px 0;
-  width: 100%;
-  font-family: Spectral Bridge;
-  font-weight: 400;
-  font-size: 40px;
-  letter-spacing: 3%;
-  color: #ac480099;
+  @include onDesktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .frontTite {
@@ -40,28 +55,70 @@
   line-height: 61px;
   color: #ac480099;
   margin: 0 0 32px 0;
+
+  @include onMobile {
+    font-size: 30px;
+    line-height: 44px;
+  }
+
+  @include onDesktop {
+    font-size: 40px;
+    line-height: 61px;
+  }
 }
 
 .wrapperDes {
-  display: flex;
-  gap: 32px;
+  @include onMobile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  @include onDesktop {
+    display: flex;
+    flex-direction: row;
+
+    gap: 32px;
+  }
 }
 
 .photo {
-  width: 261px;
-  height: 360px;
-  object-fit: cover;
+  @include onMobile {
+    width: 261px;
+    height: 360px;
+    object-fit: cover;
+  }
+  @include onDesktop {
+    width: 261px;
+    height: 360px;
+    object-fit: cover;
+  }
 }
 
 .des {
   margin: 0;
-  width: 261px;
+
   font-family: "Satoshi Variable", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
   color: #513d2e;
   cursor: default;
+
+  @include onMobile {
+    width: 100%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+  }
+  @include onDesktop {
+    width: 261px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .button {
@@ -101,26 +158,35 @@
   color: #ac4800;
 }
 
-.me__star {
-  margin-top: 136px;
-  width: 261px;
-  height: 261px;
+.gif {
+  margin: 0 auto;
 
-  display: block;
-
-  /* ключове! */
-  transform-origin: center;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
+  @include onMobile{
+    width: 100%;
+    margin: 0;
   }
 }
 
-.star.spin {
-  animation: spin 20s linear infinite;
-}
+// .me__star {
+//   margin-top: 136px;
+//   width: 288px;
+//   height: 241px;
+
+//   display: block;
+
+//   /* ключове! */
+//   transform-origin: center;
+// }
+
+// @keyframes spin {
+//   0% {
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     transform: rotate(360deg);
+//   }
+// }
+
+// .star.spin {
+//   animation: spin 20s linear infinite;
+// }

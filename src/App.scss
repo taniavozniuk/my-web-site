@@ -1,10 +1,11 @@
-// body{
-//   padding: 0;
-//   margin: 0;
-// }
-
+@import '/src/utils/misins';
 
 .main {
-  margin: 0px 40px 160px 40px;
-  
+  @include onMobile {
+    margin: 0px 16px 120px 16px;
+  }
+
+  @include onDesktop {
+    margin: 0px 40px 160px 40px;
+  }
 }

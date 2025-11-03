@@ -10,13 +10,13 @@ import { Footer } from "./component/Footer/Footer";
 export const App = () => {
   return (
     <main className="main">
-      <Header />
+      {/* <Header /> */}
       <Me />
       <TechSwiper />
       <Projects />
       <Certificate />
-      <Contact />
-      <Footer />
+      {/* <Contact /> */}
+      {/* <Footer /> */}
     </main>
   );
 };
