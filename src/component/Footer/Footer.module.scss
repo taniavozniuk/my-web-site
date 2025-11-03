@@ -3,20 +3,49 @@
 .footer {
   padding-top: 104px;
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: flex-end;
   margin: 0 auto;
   max-width: 1170px;
 }
 
 .ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-self: flex-end;
+  @include onMobile {
+    display: none;
+  }
+
+  @include onDesktop {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-self: flex-end;
+    margin: 0 auto;
+    max-width: 1170px;
+  }
+}
+
+.ulM {
+  @include onMobile {
+    margin-top: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    // gap: 16px;
+    justify-content: space-between;
+    align-self: flex-end;
+    margin: 40px auto 0 auto;
+    max-width: 1170px;
+    align-items: center;
+    text-align: center;
+  }
+  @include onDesktop {
+    display: none;
+  }
 }
 
 .li {
@@ -28,6 +57,18 @@
   color: #ac4800;
   text-decoration: none;
   font-style: bold;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s, filter 0.3s;
+
+  &:hover,
+  &:active {
+    transform: scale(1.2);
+    filter: brightness(0.7) sepia(1) hue-rotate(-10deg) saturate(3);
+  }
 }
 
 .wrapQuestion {
