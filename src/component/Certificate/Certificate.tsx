@@ -17,7 +17,7 @@ export const Certificate = () => {
           spaceBetween={30}
           slidesPerView={1}
           className="swiper"
-          style={{ background: "white", borderRadius: "16px" }}
+          style={{ borderRadius: "16px", alignContent: 'center' }}
           autoplay={{ delay: 5000, disableOnInteraction: false }}
           // breakpoints={{
           //   0: {

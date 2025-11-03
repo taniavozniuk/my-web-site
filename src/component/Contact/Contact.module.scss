@@ -30,13 +30,18 @@
 
 .conform {
   @include onMobile {
+    padding-top: 24px;
     display: flex;
     justify-content: start;
   }
 
   @include onDesktop {
+    padding-top: 104px;
     display: flex;
     justify-content: end;
+    width: 750px;
+    margin: 0 auto;
+    max-width: 1170px;
   }
 }
 
@@ -48,30 +53,38 @@
   line-height: 24px;
   color: #5c4636;
   cursor: default;
-  height: 96px;
+  // height: 96px;
   width: 359px;
-  align-items: right;
+  align-items: end;
+  // margin: 0 0 auto 0;
 }
 
 .form {
-  width: 750px;
   // width: 100%;
   margin: 0 auto;
   max-width: 1170px;
-  padding-top: 104px;
   display: flex;
   flex-direction: column;
 
-  gap: 48px;
+  @include onMobile {
+    padding-top: 40px;
+    width: 100%;
+    gap: 16px;
+  }
 
-
+  @include onDesktop {
+    padding-top: 48px;
+    width: 750px;
+    gap: 48px;
+  }
 }
 
 .WrapNameEmeil {
-  gap: 32px;
+  gap: 16px;
 
   @include onMobile {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 
   @include onDesktop {
@@ -84,8 +97,6 @@
 }
 
 .button {
-  margin-top: 16px;
-  width: 359px;
   height: 57px;
   border-radius: 16px;
   border: 1px solid #ac4800;
@@ -99,5 +110,15 @@
     background-color: #763304;
     border: 1px solid #763304;
     color: #fff;
+  }
+
+  @include onMobile {
+    margin-top: 24px;
+    width: 100%;
+  }
+
+  @include onDesktop {
+    margin-top: 16px;
+    width: 359px;
   }
 }

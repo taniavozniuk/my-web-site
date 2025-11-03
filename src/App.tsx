@@ -15,8 +15,8 @@ export const App = () => {
       <TechSwiper />
       <Projects />
       <Certificate />
-      {/* <Contact /> */}
-      {/* <Footer /> */}
+      <Contact />
+      <Footer />
     </main>
   );
 };

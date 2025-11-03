@@ -4,6 +4,7 @@
   position: relative;
   margin: 0 auto;
   max-width: 1500px;
+  background-color: transparent;
 }
 
 .infinite-scroll-track {
@@ -11,6 +12,8 @@
   gap: 32px;
   animation: infiniteScroll 25s linear infinite;
   width: max-content;
+}
+.swiper {
 }
 
 .scroll-item {

@@ -87,7 +87,7 @@
 .photo {
   @include onMobile {
     width: 261px;
-    height: 360px;
+    height: 241px;
     object-fit: cover;
   }
   @include onDesktop {
@@ -122,7 +122,7 @@
 }
 
 .button {
-  display: flex; /* або block / inline-block */
+  display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
@@ -159,34 +159,14 @@
 }
 
 .gif {
-  margin: 0 auto;
-
-  @include onMobile{
+  @include onMobile {
     width: 100%;
     margin: 0;
   }
+
+  @include onDesktop {
+    width: 350px;
+    margin: 0 auto;
+  }
 }
 
-// .me__star {
-//   margin-top: 136px;
-//   width: 288px;
-//   height: 241px;
-
-//   display: block;
-
-//   /* ключове! */
-//   transform-origin: center;
-// }
-
-// @keyframes spin {
-//   0% {
-//     transform: rotate(0deg);
-//   }
-//   100% {
-//     transform: rotate(360deg);
-//   }
-// }
-
-// .star.spin {
-//   animation: spin 20s linear infinite;
-// }

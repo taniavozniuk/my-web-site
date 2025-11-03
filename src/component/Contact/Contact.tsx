@@ -50,11 +50,10 @@ export const Contact = () => {
   return (
     <section className={styles.ContactCon} id="contact">
       <h2 className={styles.title}>START your PROJECT</h2>
-
+      <div className={styles.conform}>
+        <p className={styles.des}>{t("formdes")}</p>
+      </div>
       <form className={styles.form} onSubmit={handleSubmit}>
-        <div className={styles.conform}>
-          <p className={styles.des}>{t("formdes")}</p>
-        </div>
         <div className={styles.WrapNameEmeil}>
           <Input
             id="name"
@@ -74,7 +73,7 @@ export const Contact = () => {
         <div className={styles.messange}>
           <Input
             id="messange"
-            label="Messange *"
+            label="Message *"
             type="text"
             value={messange}
             onChange={(e) => setMessange(e.target.value)}
