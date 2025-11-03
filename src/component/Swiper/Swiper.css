@@ -13,8 +13,6 @@
   animation: infiniteScroll 25s linear infinite;
   width: max-content;
 }
-.swiper {
-}
 
 .scroll-item {
   flex-shrink: 0;
