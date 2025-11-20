@@ -2,78 +2,55 @@ import { NavLink } from "react-router-dom";
 import styles from "./Header.module.scss";
 import { LanguageSelector } from "../LanguageSelector/LanguageSelector";
 import { useTranslation } from "react-i18next";
+import React from "react";
 
-export const Header = () => {
+interface HeaderProps {
+  setOpen: (value: boolean) => void;
+  open: boolean;
+}
+
+export const Header: React.FC<HeaderProps> = ({ setOpen, open }) => {
   const { t } = useTranslation();
-  const isActive = (sectionId: string) => {
-    // логіка для active класу перевіряєю чи секція в viewport
-    const element = document.getElementById(sectionId);
-    if (!element) return styles.navigation__li;
-    const rect = element.getBoundingClientRect();
-    const isInViewport = rect.top >= 0 && rect.bottom <= window.innerHeight;
-    return isInViewport
-      ? `${styles.navigation__li} ${styles["navigation__li--active"]}`
-      : styles.navigation__li;
-  };
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <header className={styles.header}>
-      <img src="image/logo/Vector.svg" alt="logo" className="logo" />
+      <img src="image/logo/Vector.svg" alt="logo" className={styles.logo} />
+
+      {!open ? (
+        <img
+          className={styles.burger}
+          alt="open menu"
+          src="image/icon/menu.svg"
+          onClick={() => setOpen(true)}
+        />
+      ) : (
+        <img
+          className={styles.burger}
+          alt="close menu"
+          src="image/icon/close.svg"
+          onClick={() => setOpen(false)}
+        />
+      )}
       <div className={styles.wrapper}>
         <nav className={styles.navigation}>
           <ul className={styles.navigation__ul}>
-            <li className={isActive("about")}>
-              <a
-                className={styles.a}
-                href="#about"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection("about");
-                }}
-              >
+            <li className={styles.navigation__li}>
+              <a className={styles.a} href="#about">
                 {t("nav.about")}
               </a>
             </li>
-            <li className={isActive("projects")}>
-              <a
-                className={styles.a}
-                href="#projects"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection("projects");
-                }}
-              >
+            <li className={styles.navigation__li}>
+              <a className={styles.a} href="#projects">
                 {t("nav.projects")}
               </a>
             </li>
-            <li className={isActive("certificates")}>
-              <a
-                className={styles.a}
-                href="#certificates"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection("certificates");
-                }}
-              >
+            <li className={styles.navigation__li}>
+              <a className={styles.a} href="#certificates">
                 {t("nav.certificates")}
               </a>
             </li>
-            <li className={isActive("contact")}>
-              <a
-                className={styles.a}
-                href="#contact"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection("contact");
-                }}
-              >
+            <li className={styles.navigation__li}>
+              <a className={styles.a} href="#contact">
                 {t("nav.contact")}
               </a>
             </li>

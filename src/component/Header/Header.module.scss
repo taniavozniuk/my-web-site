@@ -1,16 +1,25 @@
+@use "../../utils/misins" as *;
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   max-width: 1170px;
+  padding-top: 16px;
 }
 
 .wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 56px;
+  @include onMobile {
+    display: none;
+  }
+
+  @include onDesktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+  }
 }
 
 .navigation__ul {
@@ -30,25 +39,14 @@
   text-decoration: none;
   position: relative;
 }
-
 .a {
   color: #ac480066;
   text-decoration: none;
 }
-
-.navigation__li--active {
+.a:hover {
   color: #ac4800;
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1.5px;
-    background-color: #ac4800;
-  }
 }
+
 .language-select {
   height: 30px;
   background-color: transparent;
@@ -61,5 +59,23 @@
 }
 
 .logo {
-  color: red;
+  @include onMobile {
+    width: 26px;
+    height: 26px;
+  }
+
+  @include onDesktop {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.burger {
+  @include onMobile {
+    display: flex;
+  }
+
+  @include onDesktop {
+    display: none;
+  }
 }
