@@ -1,6 +1,5 @@
 @use './variables.scss' as *;
 
-
 @mixin onTablet {
   @media (min-width: $tablet-min-width) {
     @content;
